@@ -72,38 +72,53 @@
     --foreground: 210 40% 98%;
   }
 
-  /* Light theme scope for the Menu page — premium, clean, gastronomic */
+  /* Light theme scope for the Menu page — premium, clean, gastronomic
+     Aligned with Miramar Design System:
+     Navy #003459 · Blue #004B7A · Sea #EAF6F8 · Orange #FF7A1A · Gold #F5B85B */
   .menu-light {
     --background: 60 18% 97%;             /* #FAFAF7 */
-    --foreground: 214 65% 18%;            /* #102A4C navy */
+    --foreground: 207 100% 17%;           /* #003459 navy */
 
     --surface: 0 0% 100%;                 /* card white */
-    --surface-elevated: 210 14% 96%;      /* muted surface */
+    --surface-elevated: 197 67% 95%;      /* sea foam #EAF6F8 */
 
     --card: 0 0% 100%;
-    --card-foreground: 214 65% 18%;
+    --card-foreground: 207 100% 17%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 214 65% 18%;
+    --popover-foreground: 207 100% 17%;
 
-    --primary: 214 65% 18%;               /* navy as institutional */
+    --primary: 207 100% 17%;              /* navy institutional */
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 210 14% 96%;
-    --secondary-foreground: 214 65% 18%;
+    --secondary: 197 67% 95%;             /* sea foam */
+    --secondary-foreground: 207 100% 17%;
 
-    --muted: 210 14% 96%;
+    --muted: 210 20% 96%;
     --muted-foreground: 214 12% 41%;      /* #5D6673 */
 
-    --accent: 17 88% 57%;                 /* #F26B2F coral */
+    --accent: 22 100% 55%;                /* #FF7A1A orange */
     --accent-foreground: 0 0% 100%;
+
+    --gold: 35 88% 66%;                   /* #F5B85B */
 
     --border: 214 16% 91%;                /* #E6E8EC */
     --input: 214 16% 91%;
-    --ring: 17 88% 57%;
+    --ring: 22 100% 55%;
 
     color: hsl(var(--foreground));
     background-color: hsl(var(--background));
+    font-family: 'Inter', system-ui, sans-serif;
+  }
+
+  .menu-light h1,
+  .menu-light h2,
+  .menu-light h3,
+  .menu-light h4,
+  .menu-light .font-serif {
+    font-family: 'DM Serif Display', 'Cormorant Garamond', Georgia, serif;
+    font-weight: 400;
+    letter-spacing: -0.01em;
   }
 }
 
