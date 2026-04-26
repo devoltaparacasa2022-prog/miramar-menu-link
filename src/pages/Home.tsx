@@ -72,7 +72,7 @@ const Home = () => {
             const Icon = item.icon;
             const isPrimary = item.variant === "primary";
             const baseClasses =
-              "group flex items-center gap-4 rounded-2xl border px-5 py-4 text-left transition-smooth animate-fade-up";
+              "group flex items-center gap-3 rounded-2xl border px-4 py-3 text-left transition-smooth animate-fade-up";
             const styleClasses = isPrimary
               ? "border-transparent bg-gradient-sunset text-primary-foreground shadow-glow hover:scale-[1.02]"
               : "border-border bg-surface/70 text-foreground backdrop-blur hover:bg-surface-elevated hover:border-accent/40";
