@@ -2,95 +2,74 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
+/* Miramar Rooftop Gastronomia — Design System
+   All colors HSL. Premium coastal: deep navy, sunset orange, soft gold.
 */
 
 @layer base {
   :root {
-    --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --background: 213 100% 11%;          /* deep navy #003459 */
+    --foreground: 210 40% 98%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --surface: 211 47% 18%;              /* card navy */
+    --surface-elevated: 211 47% 22%;
 
-    --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --card: 211 47% 18%;
+    --card-foreground: 210 40% 98%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    --popover: 211 47% 14%;
+    --popover-foreground: 210 40% 98%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    --primary: 24 100% 55%;              /* sunset orange #FF7A1A */
+    --primary-foreground: 213 100% 11%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --secondary: 211 47% 22%;
+    --secondary-foreground: 210 40% 98%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --muted: 211 30% 25%;
+    --muted-foreground: 210 30% 75%;
 
-    --destructive: 0 84.2% 60.2%;
+    --accent: 41 95% 67%;                /* warm gold #F5B85B */
+    --accent-foreground: 213 100% 11%;
+
+    --sea: 197 67% 92%;                  /* soft sea foam #EAF6FB */
+    --sea-foreground: 213 100% 11%;
+
+    --destructive: 0 75% 55%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 211 40% 28%;
+    --input: 211 40% 28%;
+    --ring: 24 100% 55%;
 
-    --radius: 0.5rem;
+    --radius: 1rem;
 
-    --sidebar-background: 0 0% 98%;
+    /* Gradients */
+    --gradient-sunset: linear-gradient(135deg, hsl(24 100% 55%), hsl(41 95% 67%));
+    --gradient-ocean: linear-gradient(180deg, hsl(213 100% 11% / 0.2) 0%, hsl(213 100% 8% / 0.95) 80%);
+    --gradient-deep: linear-gradient(180deg, hsl(213 100% 14%), hsl(213 100% 8%));
 
-    --sidebar-foreground: 240 5.3% 26.1%;
+    /* Shadows */
+    --shadow-glow: 0 20px 60px -20px hsl(24 100% 55% / 0.45);
+    --shadow-card: 0 10px 40px -15px hsl(213 100% 4% / 0.6);
+    --shadow-soft: 0 4px 20px -6px hsl(213 100% 4% / 0.4);
 
-    --sidebar-primary: 240 5.9% 10%;
+    /* Motion */
+    --transition-smooth: all 0.4s cubic-bezier(0.22, 1, 0.36, 1);
 
-    --sidebar-primary-foreground: 0 0% 98%;
-
-    --sidebar-accent: 240 4.8% 95.9%;
-
-    --sidebar-accent-foreground: 240 5.9% 10%;
-
-    --sidebar-border: 220 13% 91%;
-
-    --sidebar-ring: 217.2 91.2% 59.8%;
+    --sidebar-background: 213 100% 11%;
+    --sidebar-foreground: 210 40% 98%;
+    --sidebar-primary: 24 100% 55%;
+    --sidebar-primary-foreground: 213 100% 11%;
+    --sidebar-accent: 211 47% 22%;
+    --sidebar-accent-foreground: 210 40% 98%;
+    --sidebar-border: 211 40% 28%;
+    --sidebar-ring: 24 100% 55%;
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
+    --background: 213 100% 11%;
     --foreground: 210 40% 98%;
-
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
-
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
-
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
-
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
-
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
-
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
-
-    --destructive: 0 62.8% 30.6%;
-    --destructive-foreground: 210 40% 98%;
-
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
-    --sidebar-background: 240 5.9% 10%;
-    --sidebar-foreground: 240 4.8% 95.9%;
-    --sidebar-primary: 224.3 76.3% 48%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 240 3.7% 15.9%;
-    --sidebar-accent-foreground: 240 4.8% 95.9%;
-    --sidebar-border: 240 3.7% 15.9%;
-    --sidebar-ring: 217.2 91.2% 59.8%;
   }
 }
 
@@ -99,7 +78,41 @@ All colors MUST be HSL.
     @apply border-border;
   }
 
+  html {
+    -webkit-font-smoothing: antialiased;
+  }
+
   body {
     @apply bg-background text-foreground;
+    font-family: 'Inter', system-ui, sans-serif;
   }
+
+  h1, h2, h3, h4 {
+    font-family: 'Cormorant Garamond', 'Playfair Display', Georgia, serif;
+    @apply tracking-tight;
+  }
+}
+
+@layer components {
+  .text-italic-accent {
+    font-family: 'Cormorant Garamond', Georgia, serif;
+    font-style: italic;
+    @apply text-accent;
+  }
+
+  .wave-divider {
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1200 40' preserveAspectRatio='none'%3E%3Cpath d='M0 20 Q 150 0 300 20 T 600 20 T 900 20 T 1200 20' stroke='%23F5B85B' stroke-width='1.5' fill='none' opacity='0.6'/%3E%3Cpath d='M0 28 Q 150 8 300 28 T 600 28 T 900 28 T 1200 28' stroke='%23F5B85B' stroke-width='1' fill='none' opacity='0.35'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+  }
+}
+
+@layer utilities {
+  .bg-gradient-sunset { background-image: var(--gradient-sunset); }
+  .bg-gradient-ocean { background-image: var(--gradient-ocean); }
+  .bg-gradient-deep { background-image: var(--gradient-deep); }
+  .shadow-glow { box-shadow: var(--shadow-glow); }
+  .shadow-card { box-shadow: var(--shadow-card); }
+  .shadow-soft { box-shadow: var(--shadow-soft); }
+  .transition-smooth { transition: var(--transition-smooth); }
 }
