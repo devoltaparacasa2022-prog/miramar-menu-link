@@ -134,12 +134,12 @@ const Home = () => {
           })}
         </nav>
 
-        <footer className="mt-10 text-center animate-fade-up [animation-delay:700ms]">
-          <div className="wave-divider mx-auto h-3 w-32" />
-          <p className="mt-3 text-[11px] tracking-[0.3em] text-muted-foreground">
-            MIRAMAR · SÃO LUÍS — MA
-          </p>
-        </footer>
+      </div>
+    </main>
+  );
+};
+
+export default Home;
       </div>
     </main>
   );
