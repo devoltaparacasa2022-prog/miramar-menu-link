@@ -65,29 +65,9 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-ocean" />
       </div>
 
-      <div className="relative z-10 mx-auto flex min-h-screen w-full max-w-md flex-col px-6 pb-10 pt-12">
-        {/* Header */}
-        <header className="animate-fade-up">
-          <MiramarLogo />
-        </header>
-
-        {/* Tagline */}
-        <section className="mt-10 text-center animate-fade-up [animation-delay:120ms]">
-          <h2 className="font-serif text-5xl leading-[1.05] text-foreground">
-            Viva São Luís
-            <br />
-            <span className="text-italic-accent text-5xl">do alto.</span>
-          </h2>
-          <p className="mx-auto mt-4 max-w-xs text-sm text-muted-foreground">
-            Gastronomia, mar e pôr do sol — em um só lugar.
-          </p>
-          <div className="mt-5 flex justify-center">
-            <StatusBadge />
-          </div>
-        </section>
-
+      <div className="relative z-10 mx-auto flex h-screen w-full max-w-md flex-col justify-end px-6 pb-8 pt-6">
         {/* Links */}
-        <nav className="mt-10 flex flex-1 flex-col gap-3">
+        <nav className="flex flex-col gap-2.5">
           {links.map((item, idx) => {
             const Icon = item.icon;
             const isPrimary = item.variant === "primary";
