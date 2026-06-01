@@ -3,6 +3,7 @@ import { Instagram, MapPin, CalendarHeart, UtensilsCrossed, Phone } from "lucide
 import heroRooftop from "@/assets/hero-rooftop.jpg";
 import MiramarLogo from "@/components/MiramarLogo";
 import StatusBadge from "@/components/StatusBadge";
+import FallingLeaves from "@/components/FallingLeaves";
 
 interface LinkItem {
   label: string;
@@ -64,6 +65,8 @@ const Home = () => {
         />
         <div className="absolute inset-0 bg-gradient-ocean" />
       </div>
+
+      <FallingLeaves />
 
       <div className="relative z-10 mx-auto flex h-screen w-full max-w-md flex-col justify-end px-6 pb-8 pt-6">
         {/* Links */}
