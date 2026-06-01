@@ -66,6 +66,8 @@ const Home = () => {
         <div className="absolute inset-0 bg-gradient-ocean" />
       </div>
 
+      <FallingLeaves />
+
       <div className="relative z-10 mx-auto flex h-screen w-full max-w-md flex-col justify-end px-6 pb-8 pt-6">
         {/* Links */}
         <nav className="flex flex-col gap-2.5">
