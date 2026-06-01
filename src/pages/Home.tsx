@@ -3,6 +3,7 @@ import { Instagram, MapPin, CalendarHeart, UtensilsCrossed, Phone } from "lucide
 import heroRooftop from "@/assets/hero-rooftop.jpg";
 import MiramarLogo from "@/components/MiramarLogo";
 import StatusBadge from "@/components/StatusBadge";
+import FallingLeaves from "@/components/FallingLeaves";
 
 interface LinkItem {
   label: string;
